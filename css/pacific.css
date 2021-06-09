@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: Open Sans, sans-serif;
+  line-height: 1.5;
+  color: #1d1e26;
+}
+
+h1 {
+  font-weight: lighter;
+  font-size: 2rem;
+  color: white;
+}
+
+h2 {
+  font-weight: lighter;
+  font-size: 3rem;
+  color: #5687a6;
+}
+
+h3 {
+  font-weight: lighter;
+  font-size: 2.2rem;
+  color: #5687a6;
+}
+
+nav ul {
+  font-size: 1.4rem;
+  font-weight: lighter;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #cee0eb;
+}
+
+aside {
+  background: linear-gradient(
+    0deg,
+    rgba(57, 95, 120, 1) 0%,
+    rgba(86, 135, 166, 1) 50%,
+    rgba(170, 205, 227, 1) 100%
+  );
+}
+
+table {
+  border-collapse: collapse;
+  width: 50%;
+}
+
+table th,
+table td {
+  border-bottom: 1px solid #cee0eb;
+  padding: 15px;
+}
+
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #5687a6;
+  color: white;
+  font-weight: lighter;
+}
+
+td[headers="Price"] {
+    color: #5687a6;
+    font-weight: bold;
+}
