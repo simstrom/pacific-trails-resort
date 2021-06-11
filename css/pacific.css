@@ -1,39 +1,85 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
+@font-face {
+  font-family: "DM Sans";
+  src: url(../fonts/DMSans-Regular.ttf),
+       url(../fonts/DMSans-Bold.ttf);
+}
 
+/* General foundation */
 html {
   font-size: 100%;
 }
 
 body {
-  font-family: Open Sans, sans-serif;
+  font-family: "DM Sans", sans-serif;
   line-height: 1.5;
   color: #1d1e26;
 }
 
+.wrapper {
+  width: 99%;
+}
+
+/* Headings Styles */
+h1,
+h2,
+h3 {
+  font-weight: bold;
+}
+
 h1 {
-  font-weight: lighter;
   font-size: 2rem;
   color: white;
+  margin-top: 2rem;
+}
+
+h2,
+h3 {
+  color: #5687a6;
 }
 
 h2 {
-  font-weight: lighter;
   font-size: 3rem;
-  color: #5687a6;
+  margin: 2rem 0 1rem;
+  
 }
 
 h3 {
-  font-weight: lighter;
   font-size: 2.2rem;
-  color: #5687a6;
+  margin-bottom: .1rem;
+  margin-top: 1rem;
 }
 
+p {
+  line-height: 2;
+}
+
+/* Sidebar styles */
+aside {
+  background-color: #5687a6;
+  width: 20%;
+  position: fixed;
+  height: 100%;
+}
+
+/* Header styles */
+header {
+  margin-bottom: 4rem;
+  padding-top: 2rem;
+  text-align: center;
+}
+
+img[alt="Logo"] {
+  width: 20%;
+}
+
+/* Navigation Styles */
 nav ul {
   font-size: 1.4rem;
-  font-weight: lighter;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  list-style-type: none;
+}
+
+nav ul li {
+  padding: .5rem 4rem;
 }
 
 nav a {
@@ -41,22 +87,72 @@ nav a {
   text-decoration: none;
 }
 
-nav a:hover {
+nav a:focus, nav a:hover, nav a:active {
+  color: #adc8da9c;
+}
+
+nav a:focus {
+  outline: none;
+}
+
+.socials {
+  font-size: 1.7rem;
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  bottom: 2rem;
+  color: white;
+}
+
+.socials p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
   color: #cee0eb;
 }
 
-aside {
-  background: linear-gradient(
-    0deg,
-    rgba(57, 95, 120, 1) 0%,
-    rgba(86, 135, 166, 1) 50%,
-    rgba(170, 205, 227, 1) 100%
-  );
+.fa-envelope, .fa-facebook-f, .fa-instagram {
+  margin: 0 1rem;
 }
 
+.fa-envelope:hover, .fa-facebook-f:hover, .fa-instagram:hover {
+  color: #adc8da9c;
+  cursor: pointer;
+}
+
+main {
+  width: 81%;
+  float: right;
+}
+
+/* Primary Content */
+section {
+  width: 80%;
+  margin: 0 auto;
+}
+
+section img {
+  float: right;
+}
+
+article {
+  width: 50%;
+  margin: 0 2rem 4rem 0;
+  float: left;
+}
+
+article ul {
+  list-style-type: circle;
+  list-style-position: inside;
+  line-height: 2;
+  margin-top: 2rem;
+}
+
+/* Table styles */
 table {
   border-collapse: collapse;
-  width: 50%;
+  width: 100%;
 }
 
 table th,
@@ -71,10 +167,14 @@ table th {
   text-align: left;
   background-color: #5687a6;
   color: white;
-  font-weight: lighter;
 }
 
 td[headers="Price"] {
-    color: #5687a6;
-    font-weight: bold;
+  color: #3C5E73;
+  font-weight: bold;
+}
+
+footer {
+  clear: both;
+  padding: 2rem 0;
 }
