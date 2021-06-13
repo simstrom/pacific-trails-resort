@@ -16,7 +16,10 @@ body {
 }
 
 .wrapper {
-  width: 99%;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-areas: 
+  "sidebar main"
 }
 
 /* Headings Styles */
@@ -56,14 +59,12 @@ p {
 /* Sidebar styles */
 aside {
   background-color: #5687a6;
-  width: 20%;
-  position: fixed;
-  height: 100%;
+  grid-area: sidebar;
 }
 
 /* Header styles */
 header {
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
   padding-top: 2rem;
   text-align: center;
 }
@@ -76,10 +77,14 @@ img[alt="Logo"] {
 nav ul {
   font-size: 1.4rem;
   list-style-type: none;
+  display: flex;
+  flex-direction: column;
 }
 
 nav ul li {
-  padding: .5rem 4rem;
+  padding: 1rem;
+  margin: 0 auto;
+  width: 70%;
 }
 
 nav a {
@@ -97,13 +102,9 @@ nav a:focus {
 
 .socials {
   font-size: 1.7rem;
-  position: absolute;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
   text-align: center;
-  bottom: 2rem;
   color: white;
+  margin-top: 3rem
 }
 
 .socials p {
@@ -122,8 +123,7 @@ nav a:focus {
 }
 
 main {
-  width: 81%;
-  float: right;
+  grid-area: main;
 }
 
 /* Primary Content */
@@ -177,4 +177,7 @@ td[headers="Price"] {
 footer {
   clear: both;
   padding: 2rem 0;
+  text-align: center;
+  color: #1d1e2693;
+  border-top: solid 1px #adc8da9c;
 }
