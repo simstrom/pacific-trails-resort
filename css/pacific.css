@@ -4,7 +4,6 @@
        url(../fonts/DMSans-Bold.ttf);
 }
 
-/* General foundation */
 html {
   font-size: 100%;
 }
@@ -16,10 +15,7 @@ body {
 }
 
 .wrapper {
-  display: grid;
-  grid-template-columns: 20% 80%;
-  grid-template-areas: 
-  "sidebar main"
+  width: 100%;
 }
 
 /* Headings Styles */
@@ -41,30 +37,35 @@ h3 {
 }
 
 h2 {
-  font-size: 3rem;
-  margin: 2rem 0 1rem;
+  font-size: 2rem;
+  margin: 2rem 0 2rem;
   
 }
 
 h3 {
-  font-size: 2.2rem;
-  margin-bottom: .1rem;
-  margin-top: 1rem;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
 }
 
 p {
-  line-height: 2;
+  line-height: 1.5;
 }
 
-/* Sidebar styles */
+.explainer {
+  margin-top: 2rem;
+}
+
+img {
+  max-width: 100%;
+}
+
 aside {
   background-color: #5687a6;
-  grid-area: sidebar;
 }
 
-/* Header styles */
 header {
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   padding-top: 2rem;
   text-align: center;
 }
@@ -73,9 +74,9 @@ img[alt="Logo"] {
   width: 20%;
 }
 
-/* Navigation Styles */
-nav ul {
-  font-size: 1.4rem;
+ /* Navigation Styles */
+ nav ul {
+  font-size: 1.2rem;
   list-style-type: none;
   display: flex;
   flex-direction: column;
@@ -84,7 +85,6 @@ nav ul {
 nav ul li {
   padding: 1rem;
   margin: 0 auto;
-  width: 70%;
 }
 
 nav a {
@@ -101,10 +101,11 @@ nav a:focus {
 }
 
 .socials {
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   text-align: center;
   color: white;
-  margin-top: 3rem
+  margin-top: 1rem;
+  padding-bottom: 2rem;
 }
 
 .socials p {
@@ -119,65 +120,55 @@ nav a:focus {
 
 .fa-envelope:hover, .fa-facebook-f:hover, .fa-instagram:hover {
   color: #adc8da9c;
-  cursor: pointer;
 }
 
-main {
-  grid-area: main;
-}
+  /* Primary Content */
+  section {
+    width: 80%;
+    margin: 0 auto;
+  }
 
-/* Primary Content */
-section {
-  width: 80%;
-  margin: 0 auto;
-}
+  article ul {
+    list-style-type: circle;
+    list-style-position: inside;
+    line-height: 1.5;
+    margin-top: 2rem;
+  }
 
-section img {
-  float: right;
-}
+  footer {
+    margin-top: 2rem;
+    padding: 2rem 0;
+    text-align: center;
+    color: #1d1e2693;
+    border-top: solid 1px #adc8da9c;
+  }
 
-article {
-  width: 50%;
-  margin: 0 2rem 4rem 0;
-  float: left;
-}
+  img[alt="Sunset at the Pacific Ocean"] {
+    display: none;
+  }
 
-article ul {
-  list-style-type: circle;
-  list-style-position: inside;
-  line-height: 2;
-  margin-top: 2rem;
-}
+  @media(min-width:650px) and (max-width:950px) {
+    .wrapper {
+      display: grid;
+      grid-template-columns: 30% auto;
+      grid-template-rows: 100% 100%;
+    }
+  }
 
-/* Table styles */
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
+  @media(min-width:951px) {
+    .wrapper {
+      display: grid;
+      grid-template-columns: 20% auto;
+      grid-template-rows: 100% 100%;
+    }
 
-table th,
-table td {
-  border-bottom: 1px solid #cee0eb;
-  padding: 15px;
-}
+    article {
+      width: 60%;
+      margin: 0 2rem 4rem 0;
+      float: left;
+    }
 
-table th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #5687a6;
-  color: white;
-}
-
-td[headers="Price"] {
-  color: #3C5E73;
-  font-weight: bold;
-}
-
-footer {
-  clear: both;
-  padding: 2rem 0;
-  text-align: center;
-  color: #1d1e2693;
-  border-top: solid 1px #adc8da9c;
-}
+    footer {
+      clear: both;
+    }
+  }
