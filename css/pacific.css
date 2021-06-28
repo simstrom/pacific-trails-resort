@@ -90,6 +90,7 @@ nav ul li {
 nav a {
   color: white;
   text-decoration: none;
+  transition: all, 500ms;
 }
 
 nav a:focus, nav a:hover, nav a:active {
@@ -116,6 +117,7 @@ nav a:focus {
 
 .fa-envelope, .fa-facebook-f, .fa-instagram {
   margin: 0 1rem;
+  transition: all 500ms;
 }
 
 .fa-envelope:hover, .fa-facebook-f:hover, .fa-instagram:hover {
@@ -143,8 +145,13 @@ nav a:focus {
     border-top: solid 1px #adc8da9c;
   }
 
-  img[alt="Sunset at the Pacific Ocean"] {
-    display: none;
+  .gallery {
+    position: relative;
+    margin-bottom: 1rem;
+  }
+
+  .gallery img {
+    width: 20%;
   }
 
   @media(min-width:650px) and (max-width:950px) {
